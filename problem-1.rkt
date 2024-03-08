@@ -33,12 +33,14 @@ Find the sum of all the multiples of or below 1000.
   (define bounds-per-product
     ; we calculate the "bounds" of the products above, which count the total number
     ; of multiples of each of the products below our upper-bound
-    (map (lambda (product/ω) (quotient (- below 1) (car product/ω))) products-and-ωs))
+    (map (compose (curry quotient (- below 1))
+                  first)
+         products-and-ωs))
   
   (for/sum ([product/ω products-and-ωs]
             [bound     bounds-per-product])
     ; for each of the product/length pairs
-    (match-define (cons product ω) product/ω)
+    (match-define (list product ω) product/ω)
     ; we multiply
     (* ; the product
        product
