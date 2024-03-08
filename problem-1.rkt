@@ -53,6 +53,7 @@ Find the sum of all the multiples of or below 1000.
        ; i.e triangular number
        (triangle-number bound))))
 
+; 233168
 (list 1000
-      (find-sum-of-multiples  1000 3 5 7 11)
-      (find-sum-of-multiples* 1000 3 5 7 11))
+      (find-sum-of-multiples  1000 3 5)
+      (find-sum-of-multiples* 1000 3 5))
