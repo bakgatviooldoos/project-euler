@@ -28,7 +28,7 @@ Find the sum of all the multiples of or below 1000.
                #:unless (empty? prod))
       ; we also keep track of how *many* factors are in a combination
       ; because we use this for the inclusion/exclusion principle
-      (cons (apply * prod) (length prod))))
+      (list (apply * prod) (length prod))))
   
   (define bounds-per-product
     ; we calculate the "bounds" of the products above, which count the total number
