@@ -21,6 +21,7 @@ Find the sum of all the multiples of or below 1000.
     n))
 
 ; number-theoretic: better runtime, more complicated to explain
+; only allows coprime factors! hmmm...
 (define (find-sum-of-multiples:better below . factors)
   (define products-and-ωs
     ; we calculate all of the combinations of the factors, i.e.
