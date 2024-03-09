@@ -55,7 +55,7 @@ Find the sum of all the multiples of or below 1000.
        ; -1 = -1 * -1 * -1, etc.
        (expt -1 (+ ω 1))
        ; the sum of the positive integers up to the bound of the product,
-       ; i.e triangular number
+       ; i.e. triangular number
        (triangle-number bound))))
 
 ; > (find-sum-of-multiples:naive 1000 3 5)
